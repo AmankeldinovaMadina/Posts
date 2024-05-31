@@ -43,4 +43,13 @@ class DataController: ObservableObject {
         
         save(context: context)
     }
+    
+    func addImage(image: URL, context: NSManagedObjectContext ) {
+        let picture = Photo(context: context)
+        picture.id = UUID()
+        picture.image = image
+        
+        save(context: context)
+    }
 }
+

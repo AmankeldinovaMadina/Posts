@@ -1,4 +1,3 @@
- 
 
 import Foundation
 import CoreData
@@ -7,3 +6,4 @@ import CoreData
 public class Post: NSManagedObject {
 
 }
+

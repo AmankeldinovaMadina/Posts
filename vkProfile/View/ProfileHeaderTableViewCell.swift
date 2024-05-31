@@ -12,7 +12,7 @@ class ProfileHeaderTableViewCell: UITableViewCell {
 
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ryu Seon-Jae"  
+        label.text = "Ryu Seon-Jae"
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textColor = .white
         label.shadowColor = UIColor.black.withAlphaComponent(0.5)
@@ -37,6 +37,24 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         return button
     }()
 
+    let viewAllPhotosButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Photos", for: .normal)
+        button.tintColor = .black
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        return button
+    }()
+
+    
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 100, height: 100)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -51,6 +69,8 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(bioLabel)
         contentView.addSubview(addPostButton)
+        contentView.addSubview(viewAllPhotosButton)
+        contentView.addSubview(collectionView)
 
         profileImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -73,7 +93,20 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         addPostButton.snp.makeConstraints { make in
             make.top.equalTo(profileImageView.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
+        }
+
+        viewAllPhotosButton.snp.makeConstraints { make in
+            make.top.equalTo(addPostButton.snp.bottom)
+            make.left.equalToSuperview().offset(16)
+        }
+
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(viewAllPhotosButton.snp.bottom).offset(20)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(100)
             make.bottom.equalToSuperview().offset(-20)
         }
+ 
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCell")
     }
 }

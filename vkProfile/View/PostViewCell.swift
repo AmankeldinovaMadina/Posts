@@ -31,6 +31,7 @@ class PostViewCell: UITableViewCell {
     let editButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "pencil"), for: .normal)
+        button.tintColor = .black
         return button
     }()
     
@@ -49,8 +50,7 @@ class PostViewCell: UITableViewCell {
         contentView.addSubview(likeButton)
         contentView.addSubview(timestampLabel)
         contentView.addSubview(editButton)
-        
-        // Set up constraints
+         
         postTextLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(8)
             make.left.equalToSuperview().offset(16)

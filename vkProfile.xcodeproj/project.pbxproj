@@ -11,7 +11,9 @@
 		4F5147102C06CD8A008A63EB /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51470F2C06CD8A008A63EB /* TimeFormatting.swift */; };
 		4F5147132C06FCED008A63EB /* PostAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5147122C06FCED008A63EB /* PostAddView.swift */; };
 		4F5147152C07029F008A63EB /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5147142C07029F008A63EB /* PostViewCell.swift */; };
-		4F58AD652C0803C3005761D6 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58AD642C0803C3005761D6 /* CustomHeaderView.swift */; };
+		4F58AD652C0803C3005761D6 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58AD642C0803C3005761D6 /* ProfileHeaderTableViewCell.swift */; };
+		4F6BD9BA2C099690007F25F9 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BD9B92C099690007F25F9 /* PhotoCollectionViewCell.swift */; };
+		4F6BD9BE2C09A905007F25F9 /* AllPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BD9BD2C09A905007F25F9 /* AllPhotosViewController.swift */; };
 		4F8806132C0665FD001B6B50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8806122C0665FD001B6B50 /* AppDelegate.swift */; };
 		4F8806152C0665FD001B6B50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8806142C0665FD001B6B50 /* SceneDelegate.swift */; };
 		4F8806172C0665FD001B6B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8806162C0665FD001B6B50 /* ViewController.swift */; };
@@ -27,7 +29,9 @@
 		4F51470F2C06CD8A008A63EB /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		4F5147122C06FCED008A63EB /* PostAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAddView.swift; sourceTree = "<group>"; };
 		4F5147142C07029F008A63EB /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
-		4F58AD642C0803C3005761D6 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		4F58AD642C0803C3005761D6 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		4F6BD9B92C099690007F25F9 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F6BD9BD2C09A905007F25F9 /* AllPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosViewController.swift; sourceTree = "<group>"; };
 		4F88060F2C0665FD001B6B50 /* vkProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8806122C0665FD001B6B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F8806142C0665FD001B6B50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,10 +81,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4F6BD9B52C090898007F25F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F58AD642C0803C3005761D6 /* ProfileHeaderTableViewCell.swift */,
+				4F5147142C07029F008A63EB /* PostViewCell.swift */,
+				4F5147122C06FCED008A63EB /* PostAddView.swift */,
+				4F6BD9B92C099690007F25F9 /* PhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F6BD9B62C0908AF007F25F9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4F8806162C0665FD001B6B50 /* ViewController.swift */,
+				4F6BD9BD2C09A905007F25F9 /* AllPhotosViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4F8806062C0665FD001B6B50 = {
 			isa = PBXGroup;
 			children = (
-				4F58AD642C0803C3005761D6 /* CustomHeaderView.swift */,
 				4F8806112C0665FD001B6B50 /* vkProfile */,
 				4F8806102C0665FD001B6B50 /* Products */,
 				53801D54C01122B4FC2CE829 /* Pods */,
@@ -99,16 +122,15 @@
 		4F8806112C0665FD001B6B50 /* vkProfile */ = {
 			isa = PBXGroup;
 			children = (
+				4F6BD9B62C0908AF007F25F9 /* ViewController */,
+				4F6BD9B52C090898007F25F9 /* View */,
 				4F5147112C06CDD6008A63EB /* Model */,
 				4F51470E2C06CD64008A63EB /* Helpers */,
 				4F8806122C0665FD001B6B50 /* AppDelegate.swift */,
 				4F8806142C0665FD001B6B50 /* SceneDelegate.swift */,
-				4F8806162C0665FD001B6B50 /* ViewController.swift */,
 				4F88061E2C066603001B6B50 /* Assets.xcassets */,
 				4F8806202C066603001B6B50 /* LaunchScreen.storyboard */,
 				4F8806232C066603001B6B50 /* Info.plist */,
-				4F5147122C06FCED008A63EB /* PostAddView.swift */,
-				4F5147142C07029F008A63EB /* PostViewCell.swift */,
 			);
 			path = vkProfile;
 			sourceTree = "<group>";
@@ -237,13 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5147132C06FCED008A63EB /* PostAddView.swift in Sources */,
-				4F58AD652C0803C3005761D6 /* CustomHeaderView.swift in Sources */,
+				4F6BD9BE2C09A905007F25F9 /* AllPhotosViewController.swift in Sources */,
+				4F58AD652C0803C3005761D6 /* ProfileHeaderTableViewCell.swift in Sources */,
 				4F51470D2C06CB94008A63EB /* DataController.swift in Sources */,
 				4F88061D2C0665FD001B6B50 /* vkProfile.xcdatamodeld in Sources */,
 				4F8806172C0665FD001B6B50 /* ViewController.swift in Sources */,
 				4F8806132C0665FD001B6B50 /* AppDelegate.swift in Sources */,
 				4F8806152C0665FD001B6B50 /* SceneDelegate.swift in Sources */,
 				4F5147152C07029F008A63EB /* PostViewCell.swift in Sources */,
+				4F6BD9BA2C099690007F25F9 /* PhotoCollectionViewCell.swift in Sources */,
 				4F5147102C06CD8A008A63EB /* TimeFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
